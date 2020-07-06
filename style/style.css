@@ -1,9 +1,60 @@
 @font-face {
   font-family: "ArialRounded";
   src: url(../font/arlrdbd.ttf); }
+/*remove bootstrap default svg background */
+.navbar-light .navbar-toggler {
+  background: none; }
+
+/* hamburger classes and animation */
+.navbar-toggler {
+  cursor: pointer;
+  position: relative;
+  width: 2.5rem;
+  height: 2rem;
+  padding: .5rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1rem;
+  border-radius: .25rem; }
+  .navbar-toggler:focus {
+    border: none; }
+  .navbar-toggler span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background: #55595c;
+    border-radius: 3px;
+    opacity: 1;
+    left: 25%;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out; }
+    .navbar-toggler span:nth-child(1) {
+      top: 34.5%; }
+    .navbar-toggler span:nth-child(2), .navbar-toggler span:nth-child(3) {
+      top: 50%; }
+    .navbar-toggler span:nth-child(4) {
+      top: 65.5%; }
+  .navbar-toggler.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%; }
+  .navbar-toggler.open span:nth-child(2) {
+    transform: rotate(45deg); }
+  .navbar-toggler.open span:nth-child(3) {
+    transform: rotate(-45deg); }
+  .navbar-toggler.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%; }
+
+/* hamburger classes and animation */
 .btn {
   border-radius: 8px;
-  font-family: ArialRounded, serif; }
+  font-family: ArialRounded, serif;
+  letter-spacing: 0; }
+
+button:focus {
+  outline: none !important; }
 
 .btn:hover {
   opacity: 0.8;
@@ -11,10 +62,9 @@
 
 .btn-secondary {
   display: inline-block;
-  padding: 8px 15px;
+  padding: 6px 15px;
   color: #fff !important;
   font-size: 1rem;
-  letter-spacing: .15rem;
   transition: all .3s;
   position: relative;
   overflow: hidden;
@@ -62,5 +112,9 @@
   color: #fff;
   background-color: #FFCC53;
   border-color: #FFCC53; }
+
+.form-group .form-control {
+  border-radius: 8px;
+  color: #000000; }
 
 /*# sourceMappingURL=style.css.map */

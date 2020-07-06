@@ -4,48 +4,72 @@
     <meta charset="UTF-8">
     <title>Trip planner</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 
-    <link rel="stylesheet" href="style/theme-style.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/theme-style.css">
 
 </head>
 <body>
-    <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light pt-0">
-        <a class="navbar-brand pt-0" href="#">
-            <img src="images/trip-planner-logo.png" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"> Destinations <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Trips
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+<nav class="navbar navbar-expand-lg sticky-top navbar-light">
+    <div class="container-nav">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-custom" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <!--just add these span here-->
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <!--/end span-->
+        </button>
+        <div class="navbar-brand p-0 m-0">
+            <a id="planner-logo" title="planner " href="">
+                <img src="images/trip-planner-logo.png" alt="planner-logo">
+            </a>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-custom">
+            <ul class="navbar-nav left-nav">
+                <li class="nav-item dropdown position-static"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#">Destinations</a>
+                    <div class="dropdown-menu dropdown-menu-left mega-dropdown">
+                        <div class="container">
+                            <div class="row ">
+                                <div class="text-left col-sm-4">
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                </div>
+                                <div class="text-left col-sm-4">
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                </div>
+                                <div class="text-left col-sm-4">
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                    <a href="#" class="dropdown-item">ECUADOR</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Top Experiences</a>
+                <li class="nav-item"><a title="Trip" href="" class="nav-link">Trip</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                <li class="nav-item"><a title="Experiences" href="" class="nav-link">Top Experiences</a>
+                </li>
+                <li class="nav-item"><a title="About Us" href="" class="nav-link">About Us</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <ul class="navbar-nav ml-auto">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="btn-secondary btn" href="#">New Trip</a>
@@ -54,19 +78,23 @@
                         <a class="nav-link login-btn" href="#">Login</a>
                     </li>
                 </ul>
-            </form>
+            </ul>
         </div>
-    </nav>
-</div>
+    </div>
+</nav>
+
 
     <div class="banner">
         <div class="container">
             <div class="banner-content">
                 <h2>Make your own trip to South America</h2>
                 <p>Unique experiences and exclusive lodges organized by yourself</p>
-                <label>
-                    <input type="search" placeholder="Where are you going">
-                </label>
+                    <div class="form-group has-search">
+                        <span class="material-icons form-control-feedback">
+                            search
+                        </span>
+                        <input type="text" class="form-control" placeholder="Where are you going?">
+                    </div>
             </div>
         </div>
     </div>
@@ -178,7 +206,211 @@
             </div>
         </div>
     </div>
+    <div class="page-section">
+        <div class="bg-yellow py-3 py-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="services-card">
+                            <h2>
+                                What we Will do...
+                            </h2>
+                        </div>
+                        <div class="services-card">
+                            <h3>
+                                1. Refine your trip
+                            </h3>
+                            <p>
+                                We won't let you do anything (too) crazy!
+                            </p>
+                        </div>
+                        <div class="services-card mb-lg-0 mb-5">
+                            <h3>
+                                2. Get you the best prices
+                            </h3>
+                            <p>
+                                 We promise to save you some pennies. Well, more tan a few pennies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="services-card">
+                            <h3>
+                                3. Refine your trip
+                            </h3>
+                            <p>
+                                We won't let you do anything (too) crazy!
+                            </p>
+                        </div>
+                        <div class="services-card">
+                            <h3>
+                                4. Refine your trip
+                            </h3>
+                            <p>
+                                We won't let you do anything (too) crazy!
+                            </p>
+                        </div>
+                        <div class="services-card  mb-0">
+                            <h3>
+                                5. Get you the best prices
+                            </h3>
+                            <p>
+                                We promise to save you some pennies. Well, more tan a few pennies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-section">
+        <div class="destination-section">
+            <div class="container">
+                <div class="section-content">
+                    <div class="row justify-content-between">
+                        <div class="text-left col-sm-4">
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                        </div>
+                        <div class="text-left col-sm-4">
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                        </div>
+                        <div class="text-left col-sm-4">
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                            <a href="#" class="dropdown-item">ECUADOR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer border-b">
+                    <button class="btn-secondary btn" href="#">View all</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-section">
+        <div class="container">
+        <div class="section-head">
+            <h2 class="section-title">
+                Travel Guides
+            </h2>
+            <p class="section-description">
+                Make your own trip to South America Make your own trip to South America.
+                Make your own trip to South America Make your own trip to South America.
+            </p>
+        </div>
+        <div class="section-content">
+            <div class="owl-carousel">
+                <div>
+                    <div class="trip-highlight-card">
+                        <div class="card-head">
+                            <img src="images/trip-card-img.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h3>1 nights in Galapagos</h3>
+                            <p>
+                                With this tour you Will be able to visit the
+                                Galapagos Islands and discover off beaten track.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="trip-highlight-card">
+                        <div class="card-head">
+                            <img src="images/trip-card-img.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h3>2 nights in Galapagos</h3>
+                            <p>
+                                With this tour you Will be able to visit the
+                                Galapagos Islands and discover off beaten track.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="trip-highlight-card">
+                        <div class="card-head">
+                            <img src="images/trip-card-img.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h3>3 nights in Galapagos</h3>
+                            <p>
+                                With this tour you Will be able to visit the
+                                Galapagos Islands and discover off beaten track.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="trip-highlight-card">
+                        <div class="card-head">
+                            <img src="images/trip-card-img.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h3>4 nights in Galapagos</h3>
+                            <p>
+                                With this tour you Will be able to visit the
+                                Galapagos Islands and discover off beaten track.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-footer border-b">
+            <button class="btn-secondary btn" href="#">View all highlighted trips</button>
+        </div>
+    </div>
+    </div>
+    <div class="page-section">
+        <div class="container">
+            <div class="section-content border-b">
+                <div class="media contact-us align-items-center">
+                    <img class="mr-3 mr-lg-4" src="images/contact-us.png" alt="Generic contact image">
+                    <div class="media-body">
+                        <h3 class="mt-0">Need a hand?</h3>
+                        <p>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                            Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </p>
+                        <button class="btn-secondary btn" href="#">New Trip</button>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-section">
+        <div class="signUp-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>
+                            Be Amezed with South America
+                        </h3>
+                        <p>
+                            Inspiring travel content and advice from our experts delivered straight to your inbox.
+                        </p>
+                        <form class="form-inline justify-content-center">
+                            <div class="form-group mx-sm-3 mb-2">
+                                <input type="text" class="form-control border-0" id="" placeholder="Email Address">
+                            </div>
+                            <button type="submit" class="btn btn-secondary mb-2">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 
@@ -187,6 +419,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/themeJs.js"></script>
+
 <script>
     $(document).ready(function(){
         $(".owl-carousel").owlCarousel({

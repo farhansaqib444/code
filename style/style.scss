@@ -4,9 +4,79 @@
   src: url(../font/arlrdbd.ttf);
 }
 $color: #FFCC53;
+
+/*remove bootstrap default svg background */
+$barcolor: #55595c;
+$barheight:  3px;
+.navbar-light .navbar-toggler {
+  background: none;
+}
+
+/* hamburger classes and animation */
+.navbar-toggler {
+  cursor: pointer;
+  position: relative;
+  width: 2.5rem;
+  height: 2rem;
+  padding: .5rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1rem;
+  border-radius: .25rem;
+  &:focus {
+    border: none;
+  }
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background: $barcolor;
+    border-radius: $barheight;
+    opacity: 1;
+    left: 25%;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 34.5%;
+    }
+    &:nth-child(2), &:nth-child(3) {
+      top: 50%;
+    }
+    &:nth-child(4) {
+      top: 65.5%;
+    }
+  }
+  &.open {
+    span {
+      &:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+      &:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+    }
+  }
+}
+/* hamburger classes and animation */
+
 .btn {
   border-radius: 8px;
   font-family: ArialRounded, serif;
+  letter-spacing: 0;
+}
+button:focus {
+  outline: none !important;
 }
 .btn:hover {
   opacity: 0.8;
@@ -14,10 +84,9 @@ $color: #FFCC53;
 }
 .btn-secondary {
   display: inline-block;
-  padding: 8px 15px;
+  padding: 6px 15px;
   color: #fff !important;
   font-size: 1rem;
-  letter-spacing: .15rem;
   transition: all .3s;
   position: relative;
   overflow: hidden;
@@ -69,4 +138,11 @@ $color: #FFCC53;
   color: #fff;
   background-color: #FFCC53;
   border-color: #FFCC53;
+}
+
+.form-group {
+  .form-control {
+    border-radius: 8px;
+    color: #000000;
+  }
 }

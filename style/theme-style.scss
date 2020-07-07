@@ -326,6 +326,31 @@ body {
     }
   }
 }
+
+.tabbable.nav-tabs {
+  margin-bottom:  20px;
+  overflow-x: auto;
+  overflow-y:hidden;
+  flex-wrap: nowrap;
+  .nav-item {
+    padding-bottom: 20px;
+    a.nav-link {
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 2px solid #FCFBFA;
+      border-radius: 3px;
+      color: #37424A;
+      font-family: ArialRounded, serif;
+      font-size: 18px;
+      margin: 0 5px;
+      &.active {
+        background: #FCFBFA 0% 0% no-repeat padding-box;
+      }
+    }
+  }
+}
+.tabbable.nav-tabs .nav-link {
+  white-space: nowrap;
+}
 //blog css end
 
 @media (min-width: 992px) {

@@ -270,6 +270,27 @@ body {
     letter-spacing: 0;
     color: #040404; }
 
+.tabbable.nav-tabs {
+  margin-bottom: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap; }
+  .tabbable.nav-tabs .nav-item {
+    padding-bottom: 20px; }
+    .tabbable.nav-tabs .nav-item a.nav-link {
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 2px solid #FCFBFA;
+      border-radius: 3px;
+      color: #37424A;
+      font-family: ArialRounded, serif;
+      font-size: 18px;
+      margin: 0 5px; }
+      .tabbable.nav-tabs .nav-item a.nav-link.active {
+        background: #FCFBFA 0% 0% no-repeat padding-box; }
+
+.tabbable.nav-tabs .nav-link {
+  white-space: nowrap; }
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0;

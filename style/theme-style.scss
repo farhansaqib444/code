@@ -161,7 +161,7 @@ body {
   .card-head {
     margin-bottom: 15px;
     img {
-      max-width: 270px;
+      max-width: 425px;
       width: 100%;
     }
   }
@@ -495,3 +495,13 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .contact-us.media {
+    flex-direction: column;
+
+    img {
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}

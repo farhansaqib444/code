@@ -7,3 +7,4 @@ $(function() {
         $('.navbar-toggler').addClass('open');
     })
 });
+

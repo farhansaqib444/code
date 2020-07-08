@@ -301,6 +301,7 @@ body {
 //blog css
 .blog-card {
   border-radius: 10px;
+  margin-bottom: 30px;
   .card-head {
     margin-bottom: 15px;
     img {
@@ -350,6 +351,123 @@ body {
 }
 .tabbable.nav-tabs .nav-link {
   white-space: nowrap;
+}
+.publisher-grid {
+  .pub-name {
+    margin-bottom: 0;
+    font-size: 22px;
+    font-family: Arial, serif;
+    letter-spacing: 0px;
+    span {
+      color: #FFCC53;
+    }
+  }
+  .pub-date {
+    font-size: 18px;
+    font-family: Arial, serif;
+    letter-spacing: 0px;
+    color: #559EA6;
+  }
+}
+.blog-post {
+  max-width: 991px;
+  width: 100%;
+  position: relative;
+}
+.post-title-h2 {
+  font-size: 28px;
+  font-family: ArialRounded, serif;
+  letter-spacing: 0px;
+  color: #040404;
+  margin-bottom: 35px;
+}
+.post-text {
+  font-size: 18px;
+  font-family: Arial, serif;
+  letter-spacing: 0px;
+  color: #040404;
+  margin-bottom: 15px;
+}
+.post-img {
+  max-width: 100%;
+  width: 100%;
+  margin: 15px auto;
+}
+.post-internal-link {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+  align-items: center;
+  margin: 35px 0;
+  img {
+    max-width: 190px;
+    width: 100%;
+  }
+  .media-body {
+    h5 {
+      font-size: 28px;
+      font-family: ArialRounded, serif;
+      letter-spacing: 0px;
+      color: #2C50B4;
+    }
+    p {
+      font-size: 22px;
+      font-family: Arial, serif;
+      letter-spacing: 0px;
+      color: #040404;
+    }
+  }
+}
+.drag-content {
+  position: absolute;
+  right: -230px;
+  top: 90px;
+}
+.editor-card {
+  max-width: 220px;
+  width: 100%;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+  padding: 25px 20px;
+  h5 {
+    font-size: 22px;
+    font-family: ArialRounded, serif;
+    letter-spacing: 0px;
+    color: #040404;
+  }
+  .more-text {
+    font-size: 18px;
+    font-family: Arial, serif;
+    letter-spacing: 0px;
+    color: #040404;
+    margin-bottom: 0;
+  }
+  a.link {
+    font-size: 18px;
+    font-family: Arial, serif;
+    letter-spacing: 0px;
+    color: #FFCC53;
+    &:hover {
+      color: #FFCC53;
+      cursor: pointer;
+    }
+    &:active {
+      color: #FFCC53;
+    }
+  }
+}
+.tag-grid {
+  label {
+    background: #F1F1F1 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 0 15px 15px 0;
+    font-size: 20px;
+    font-family: ArialRounded, serif;
+    letter-spacing: 0;
+    color: #37424A;
+  }
 }
 //blog css end
 

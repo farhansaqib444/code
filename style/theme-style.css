@@ -78,7 +78,9 @@ body {
     left: 50%;
     top: 50%;
     text-align: center;
-    padding: 0 15px; }
+    padding: 0 15px;
+    max-width: 645px;
+    width: 100%; }
     .banner .banner-content h2 {
       font-family: ArialRounded, serif;
       font-weight: bold;
@@ -393,12 +395,15 @@ body {
   letter-spacing: 0;
   color: #37424A; }
 
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 0;
-    margin: 0 45px; }
-
+    margin: 0 45px; } }
+@media (max-width: 1024px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    margin: 0 20px; } }
+@media (min-width: 992px) {
   .navbar-expand-lg .left-nav {
     margin-left: 140px; }
 
@@ -408,9 +413,16 @@ body {
   .navbar {
     padding: 13px 15px; }
 
+  .navbar-expand-lg .navbar-nav .nav-link {
+    margin: 0 20px; } }
+@media (max-width: 768px) {
   .navbar-brand {
     max-width: 71px;
-    transform: translate(-50%, 0);
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    top: 50%;
     left: 50%; } }
 @media (max-width: 767px) {
   .contact-us.media {

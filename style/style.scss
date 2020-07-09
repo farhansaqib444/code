@@ -164,3 +164,37 @@ button:focus {
     color: #000000;
   }
 }
+
+
+//Homepage Owl Carousel
+.trips-owl.owl-carousel {
+  .owl-nav {
+    button {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      background: #fff;
+      padding: 0 !important;
+      height: 50px;
+      width: 50px;
+      line-height: 0;
+      border-radius: 100%;
+      box-shadow: 0px 3px 6px #00000029;
+      opacity: 1;
+      span {
+        font-weight: 600;
+        font-size: 50px;
+        margin-bottom: 13px;
+        display: inline-block;
+        margin-right: 2px;
+      }
+    }
+    .owl-prev {
+      left: 0;
+    }
+    .owl-next {
+      right: -50px;
+    }
+  }
+}
+//Homepage Owl Carousel end

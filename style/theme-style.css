@@ -5,6 +5,13 @@ body {
   margin: 0;
   padding: 0; }
 
+a {
+  color: #FFCC53; }
+  a:hover {
+    color: #FFCC53;
+    cursor: pointer;
+    text-decoration: none; }
+
 .container-nav {
   max-width: 1400px;
   width: 100%;
@@ -24,13 +31,13 @@ body {
 
 .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
-  max-width: 130px;
+  max-width: 125px;
   width: 100%;
   position: absolute;
   z-index: 99;
   top: 0; }
   .navbar-brand img {
-    max-width: 120px;
+    max-width: 125px;
     width: 100%; }
 
 .navbar-nav {
@@ -117,7 +124,7 @@ body {
     font-family: ArialRounded, serif; }
 
 .page-section .section-head {
-  margin-bottom: 55px; }
+  margin-bottom: 50px; }
   .page-section .section-head .section-title {
     font-size: 28px;
     font-weight: bold;
@@ -136,6 +143,56 @@ body {
   padding-bottom: 55px; }
   .page-section .section-footer.border-b {
     border-bottom: 1px solid rgba(112, 112, 112, 0.2); }
+
+.icon-heading {
+  margin-bottom: 15px; }
+  .icon-heading h3 {
+    font-size: 22px;
+    font-family: Arial, serif;
+    letter-spacing: 0px;
+    color: #040404;
+    margin-bottom: 0; }
+    .icon-heading h3 img {
+      width: 33px;
+      margin-right: 15px; }
+
+.readmore {
+  position: relative;
+  max-height: 100px;
+  overflow: hidden;
+  padding: 10px;
+  margin-bottom: 20px;
+  transition: max-height 0.15s ease-out; }
+
+.readmore.expand {
+  max-height: 5000px !important;
+  transition: max-height 0.35s ease-in-out; }
+
+.readmore-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 60px;
+  color: #FFCC53;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 40px;
+  background-image: linear-gradient(to bottom, transparent, white 70%);
+  cursor: pointer; }
+
+.readmore-link.expand {
+  position: relative;
+  background-image: none;
+  padding-top: 10px;
+  height: 20px; }
+
+.readmore-link:after {
+  content: "+ more"; }
+
+.readmore-link.expand:after {
+  content: "- less"; }
 
 .trip-highlight-card {
   border-radius: 10px; }
@@ -282,17 +339,15 @@ body {
     padding-bottom: 20px; }
     .tabbable.nav-tabs .nav-item a.nav-link {
       background: #FFFFFF 0% 0% no-repeat padding-box;
-      border: 2px solid #FCFBFA;
+      border: 1px solid #FCFBFA;
       border-radius: 3px;
       color: #37424A;
       font-family: ArialRounded, serif;
       font-size: 18px;
-      margin: 0 5px; }
+      margin: 0 5px;
+      white-space: nowrap; }
       .tabbable.nav-tabs .nav-item a.nav-link.active {
         background: #FCFBFA 0% 0% no-repeat padding-box; }
-
-.tabbable.nav-tabs .nav-link {
-  white-space: nowrap; }
 
 .publisher-grid .pub-name {
   margin-bottom: 0;
@@ -358,11 +413,13 @@ body {
 
 .editor-card {
   max-width: 220px;
+  max-height: 470px;
   width: 100%;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 8px;
-  padding: 25px 20px; }
+  padding: 25px 20px;
+  overflow-x: auto; }
   .editor-card h5 {
     font-size: 22px;
     font-family: ArialRounded, serif;
@@ -395,6 +452,51 @@ body {
   letter-spacing: 0;
   color: #37424A; }
 
+.tabbable.nav-tabs.orange {
+  border: none; }
+  .tabbable.nav-tabs.orange .nav-item a.nav-link {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #FFCC53;
+    border-radius: 3px;
+    color: #FFCC53;
+    font-family: Arial, serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 5px;
+    white-space: nowrap; }
+    .tabbable.nav-tabs.orange .nav-item a.nav-link.active {
+      background: #FFCC53 0% 0% no-repeat padding-box;
+      color: #2C50B4; }
+
+.ex-index-card-content {
+  background: url("../images/ex-index-trip.png") no-repeat;
+  background-size: cover;
+  min-height: 226px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative; }
+  .ex-index-card-content .card-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px; }
+    .ex-index-card-content .card-info h3 {
+      margin: 0; }
+      .ex-index-card-content .card-info h3 a {
+        font-size: 22px;
+        font-family: Arial, serif;
+        font-weight: bold;
+        letter-spacing: 0;
+        color: #FFFFFF;
+        margin-bottom: 0; }
+        .ex-index-card-content .card-info h3 a:hover {
+          color: #FFFFFF; }
+    .ex-index-card-content .card-info p {
+      font-size: 22px;
+      font-family: Arial, serif;
+      letter-spacing: 0;
+      color: #FFCC53;
+      margin-bottom: 0; }
+
 @media (min-width: 1025px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0;
@@ -407,7 +509,7 @@ body {
   .navbar-expand-lg .left-nav {
     margin-left: 140px; }
 
-  .nav-item .btn-secondary {
+  .nav-item .btn-primary {
     margin-right: 55px; } }
 @media (max-width: 991px) {
   .navbar {

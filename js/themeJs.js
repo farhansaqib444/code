@@ -62,3 +62,8 @@ $(".readmore-link").click( function(e) {
         $(e.target).addClass("expand");
     }
 });
+
+$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});

@@ -325,13 +325,19 @@ button:focus {
 .breadcrumb {
   background: #fff;
   .breadcrumb-item {
-    font-size: 24px;
-    font-family: ArialRounded, serif;
     font-weight: 600;
     color: #001881;
+    font-size: 24px;
+    font-family: ArialRounded, serif;
     a {
       letter-spacing: 0px;
       color: #777777;
     }
+  }
+}
+
+.images-grid {
+  a {
+    margin-bottom: 15px;
   }
 }

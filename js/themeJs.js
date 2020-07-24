@@ -15,10 +15,10 @@ $(document).ready(function(){
         margin:25,
         responsive:{
             0:{
-                items:1,
+                items:2,
             },
             600:{
-                items:2,
+                items:3,
                 nav: true,
             },
             1024:{
@@ -67,3 +67,5 @@ $(document).on("click", '[data-toggle="lightbox"]', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox();
 });
+
+

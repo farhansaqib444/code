@@ -2,7 +2,7 @@
   font-family: "ArialRounded";
   src: url(../font/arlrdbd.ttf);
 }
-body {
+body, p, h1, h2, h3, h4, label {
   margin: 0;
   padding: 0;
 }
@@ -85,7 +85,7 @@ a {
   background-image: url("../images/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 75px;
+  margin-bottom: 72px;
   .banner-content {
     position: absolute;transform: translate(-50%, -50%);
     left: 50%;
@@ -107,7 +107,7 @@ a {
       letter-spacing: 0;
       font-weight: 400;
       color: #FFFFFF;
-      margin-bottom: 55px;
+      margin-bottom: 56px;
     }
     input {
 
@@ -140,8 +140,9 @@ a {
 
 .page-section {
   .section-head {
-    margin-bottom: 50px;
+    margin-bottom: 56px;
     .section-title {
+      margin-bottom: 40px;
       font-size: 28px;
       font-weight: bold;
       font-family: ArialRounded, serif;
@@ -156,11 +157,11 @@ a {
     }
   }
   .section-content {
-    margin-bottom: 55px;
+    margin-bottom: 56px;
   }
   .section-footer {
-    margin-bottom: 55px;
-    padding-bottom: 55px;
+    margin-bottom: 56px;
+    padding-bottom: 72px;
     &.border-b {
       border-bottom: 1px solid rgba(112, 112, 112, 0.2);
     }
@@ -169,11 +170,11 @@ a {
 .icon-heading {
   margin-bottom: 15px;
   h3 {
+    margin-bottom: 18px;
     font-size: 22px;
     font-family: Arial, serif;
     letter-spacing: 0px;
     color: #040404;
-    margin-bottom: 0;
     img {
       width: 33px;
       margin-right: 15px;
@@ -309,7 +310,7 @@ a {
   }
 }
 .destination-section {
-  margin: 70px 0;
+  margin: 72px 0;
   a {
     border-bottom: 2px solid #FFCC53;
     opacity: 0.8;
@@ -485,9 +486,10 @@ a {
   }
 }
 .drag-content {
-  position: absolute;
-  right: -230px;
-  top: 90px;
+  position: sticky;
+  margin-bottom: 120px;
+  margin-top: 100px;
+  top: 100px;
 }
 .editor-card {
   max-width: 220px;
@@ -615,7 +617,7 @@ a {
     margin-left: 140px;
   }
   .nav-item .btn-primary {
-    margin-right: 55px;
+    margin-right: 56px;
   }
 }
 @media (max-width: 991px) {
@@ -637,8 +639,54 @@ a {
     top: 50%;
     left: 50%;
   }
+  .drag-content {
+    display: none;
+    position: relative;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    top: initial;
+    .editor-card {
+      max-width: 100%;
+    }
+  }
 }
 @media (max-width: 767px) {
+  .destination-section {
+    margin: 50px 0;
+  }
+  .banner {
+    margin-bottom: 50px;
+  }
+  .page-section {
+    .section-head {
+      margin-bottom: 30px;
+    }
+    .section-content {
+      margin-bottom: 30px;
+    }
+    .section-footer {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  .page-section .section-head .section-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .contact-us .media-body h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+  .page-section .section-head .section-description {
+    font-size: 18px;
+  }
+  .trip-highlight-card .card-content h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .trip-highlight-card .card-content p {
+    font-size: 15px;
+  }
   .contact-us.media {
     flex-direction: column;
 
@@ -646,5 +694,23 @@ a {
       margin-left: 15px;
       margin-bottom: 15px;
     }
+  }
+  .post-internal-link.media {
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      max-width: 425px;
+      margin: 0 0 15px 0 !important;
+      border-radius: 10px 10px 0 0;
+    }
+    .media-body {
+      text-align: center;
+      padding-bottom: 15px;
+    }
+  }
+  .contact-us .media-body p {
+    margin-bottom: 15px;
+    font-size: 18px;
   }
 }

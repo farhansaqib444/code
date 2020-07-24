@@ -187,10 +187,12 @@ button:focus {
   border-radius: 8px;
   color: #000000; }
 
+.trips-owl.owl-carousel .owl-dots {
+  display: none; }
 .trips-owl.owl-carousel .owl-nav button {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 40%;
   background: #fff;
   padding: 0 !important;
   height: 50px;
@@ -351,5 +353,17 @@ button:focus {
 .btn-linkedIn img, .btn-google img {
   width: 30px;
   margin-right: 10px; }
+
+.inline-listing {
+  padding: 0;
+  list-style: none; }
+  .inline-listing li {
+    display: inline-block;
+    margin: 0 5px; }
+    .inline-listing li a {
+      cursor: pointer; }
+
+.blog-social-list li a {
+  color: #04040499; }
 
 /*# sourceMappingURL=style.css.map */

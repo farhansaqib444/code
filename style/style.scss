@@ -447,3 +447,191 @@ button:focus {
     }
   }
 }
+
+$main-color: #FFCC53;
+$secondary-color: #37424A;
+
+@mixin display-child($n) {
+  @for $i from 2 through $n {
+    &:nth-child(#{$i}) {
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}
+.container-pagination {
+  border: 1px solid #FFCC53;
+  padding: 10px 10px;
+  border-radius: 5px;
+  max-width: 869px;
+  width: 100%;
+  margin: 15px auto 15px auto;
+  counter-reset: pagination;
+  text-align: center;
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  ul {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  ul, li {
+    list-style: none;
+    font-size: 22px;
+    display: inline;
+    padding-left: 0px;
+  }
+
+  li {
+    counter-increment: pagination;
+    &:hover {
+      a {
+        color: #fff;
+        background-color: $secondary-color;
+        border-radius: 100%;
+      }
+    }
+    &.active {
+      a {
+        color: #fff;
+        background-color: $secondary-color;
+        border-radius: 100%;
+      }
+    }
+    &:first-child {
+      float: left;
+
+      a {
+        border-radius: 10px;
+        &:after {
+          content: "< First";
+        }
+      }
+    }
+    &:nth-child(2) {
+      counter-reset: pagination;
+    }
+    &:last-child {
+      float: right;
+
+      a {
+        border-radius: 10px;
+        &:after {
+          content: "Last >";
+        }
+      }
+    }
+    a {
+      color: $main-color;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      padding: 2px 13px;
+
+    }
+    a:after {
+      content: " " counter(pagination) " ";
+    }
+  }
+}
+.large {
+  li {
+    a {
+      display: none;
+    }
+    &:first-child {
+      a {
+        display: inline-block;
+      }
+      a:after {
+        content: "< First";
+      }
+    }
+    @include display-child(8);
+    &:last-child {
+      a {
+        display: inline-block;
+      }
+      a:after {
+        content: "Last >";
+      }
+    }
+    &:nth-last-child(2) {
+      a {
+        display: inline-block;
+      }
+    }
+    &:nth-last-child(3) {
+      display: inline-block;
+      &:after {
+        content: "...";
+        color: #FFCC53;
+      }
+    }
+  }
+}
+
+                //with our dots pagination css
+                //with our dots pagination css
+
+.pagination_section {
+  text-align: center;
+  border: 1px solid #FFCC53;
+  padding: 10px 10px;
+  border-radius: 5px;
+  max-width: 869px;
+  width: 100%;
+  margin: 15px auto 15px auto;
+}
+
+/* pagination styling */
+.pagination_section a {
+  padding: 3px 12px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #FFCC53;
+}
+
+/* pagination hover effect on non-active */
+.pagination_section a:hover:not(.active) {
+  background-color: #37424A;
+  color: #fff;
+  border-radius: 100%;
+}
+
+/* pagination hover effect on active*/
+a:nth-child(5) {
+  background-color: #37424A;
+  color: #fff;
+  border-radius: 100%;
+}
+
+.pagination_section a:first-child {
+  float: left;
+  margin-top: -5px;
+  border-radius: 10px !important;
+}
+
+.pagination_section a:last-child {
+  float: right;
+  margin-top: -5px;
+  border-radius: 10px !important;
+}
+@media (max-width: 767px) {
+  .pagination_section a {
+    font-size: 15px;
+    padding: 3px 9px;
+  }
+  .container-pagination li a {
+    padding: 2px 9px;
+  }
+  .container-pagination ul, .container-pagination li {
+    font-size: 15px;
+  }
+}
+
+          //with our dots pagination css end
+          //with our dots pagination css end

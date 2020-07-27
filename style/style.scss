@@ -237,7 +237,7 @@ button:focus {
      button {
        position: absolute;
        transform: translate(-50%, -50%);
-       top: 40%;
+       top: 50%;
        background: #fff;
        padding: 0 !important;
        height: 50px;
@@ -262,6 +262,52 @@ button:focus {
      }
    }
  }
+
+.trips-owl.mini-img.owl-carousel {
+  .owl-dots {
+  }
+  .owl-nav {
+    button {
+      top: 32%;
+      span {
+      }
+    }
+    .owl-prev {
+    }
+    .owl-next {
+    }
+  }
+}
+.trips-owl.large-img.owl-carousel {
+   .owl-dots {
+   }
+   .owl-nav {
+     button {
+       top: 40%;
+       span {
+       }
+     }
+     .owl-prev {
+     }
+     .owl-next {
+     }
+   }
+ }
+.trips-owl.large-img.with-three.owl-carousel {
+  .owl-dots {
+  }
+  .owl-nav {
+    button {
+      top: 33%;
+      span {
+      }
+    }
+    .owl-prev {
+    }
+    .owl-next {
+    }
+  }
+}
 
 .country-owl.owl-carousel{
   .owl-nav {

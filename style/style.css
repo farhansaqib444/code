@@ -192,7 +192,7 @@ button:focus {
 .trips-owl.owl-carousel .owl-nav button {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 40%;
+  top: 50%;
   background: #fff;
   padding: 0 !important;
   height: 50px;
@@ -211,6 +211,15 @@ button:focus {
   left: 0; }
 .trips-owl.owl-carousel .owl-nav .owl-next {
   right: -50px; }
+
+.trips-owl.mini-img.owl-carousel .owl-nav button {
+  top: 32%; }
+
+.trips-owl.large-img.owl-carousel .owl-nav button {
+  top: 40%; }
+
+.trips-owl.large-img.with-three.owl-carousel .owl-nav button {
+  top: 33%; }
 
 .country-owl.owl-carousel .owl-nav button {
   position: absolute;

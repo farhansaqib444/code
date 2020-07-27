@@ -8,6 +8,29 @@ $(function() {
     })
 });
 
+$(document).ready(function(){
+    $(".owl-carousel.with-three").owlCarousel({
+        loop:true,
+        margin:25,
+        responsive:{
+            0:{
+                items:2,
+            },
+            600:{
+                items:3,
+                nav: true,
+            },
+            1024:{
+                items:3,
+                nav: true,
+            },
+            1200:{
+                items:3,
+                nav: true,
+            }
+        }
+    });
+});
 
 $(document).ready(function(){
     $(".owl-carousel.trips-owl").owlCarousel({
@@ -32,6 +55,7 @@ $(document).ready(function(){
         }
     });
 });
+
 
 $(document).ready(function(){
     $(".country-owl.owl-carousel").owlCarousel({

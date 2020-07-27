@@ -207,13 +207,15 @@ a {
     font-weight: bold;
     font-family: Arial, serif;
     letter-spacing: 0;
-    color: #040404; }
+    color: #040404;
+    margin-bottom: 18px; }
   .trip-highlight-card .card-content p {
     font-size: 17px;
     font-weight: 400;
     font-family: Arial, serif;
     letter-spacing: 0;
-    color: #040404; }
+    color: #040404;
+    margin-bottom: 18px; }
 
 .equal-height {
   display: -webkit-box;

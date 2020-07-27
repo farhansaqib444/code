@@ -271,6 +271,18 @@ button:focus {
 .images-grid a {
   margin-bottom: 15px; }
 
+.video-gallery .video-left-widget a img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; }
+.video-gallery .video-right-widget .video-right-item {
+  margin-bottom: 12px; }
+  .video-gallery .video-right-widget .video-right-item:last-child {
+    margin-bottom: 0; }
+    .video-gallery .video-right-widget .video-right-item:last-child a img {
+      border-bottom-right-radius: 5px; }
+  .video-gallery .video-right-widget .video-right-item:first-child a img {
+    border-top-right-radius: 5px; }
+
 .input-wrapper {
   position: relative;
   line-height: 14px;

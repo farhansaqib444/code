@@ -345,6 +345,37 @@ button:focus {
   }
 }
 
+.video-gallery {
+  .video-left-widget {
+    a {
+      img {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+    }
+  }
+  .video-right-widget {
+    .video-right-item {
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+        a {
+          img {
+            border-bottom-right-radius: 5px;
+          }
+        }
+      }
+      &:first-child {
+        a {
+          img {
+            border-top-right-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .input-wrapper {
   position: relative;
   line-height: 14px;

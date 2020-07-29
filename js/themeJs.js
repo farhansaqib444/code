@@ -1,3 +1,7 @@
+$('.carousel').carousel({
+
+}) ;
+
 $(function() {
     //toggle class open on button
     $('#navbar-custom').on('hide.bs.collapse', function () {
@@ -10,7 +14,6 @@ $(function() {
 
 $(document).ready(function(){
     $(".owl-carousel.with-three").owlCarousel({
-        loop:true,
         margin:25,
         responsive:{
             0:{
@@ -51,6 +54,30 @@ $(document).ready(function(){
             1200:{
                 items:4,
                 nav: true,
+            }
+        }
+    });
+});
+
+$(document).ready(function(){
+    $(".owl-carousel.padding-spacing").owlCarousel({
+        loop:true,
+        margin:25,
+        responsive:{
+            0:{
+                stagePadding: 50,
+            },
+            600:{
+                nav: true,
+                stagePadding: 50,
+            },
+            1024:{
+                nav: true,
+                stagePadding: 50,
+            },
+            1200:{
+                nav: true,
+                stagePadding: 50,
             }
         }
     });
@@ -106,4 +133,22 @@ $('#modal6').on('hidden.bs.modal', function (e) {
 $('#modal4').on('hidden.bs.modal', function (e) {
     // do something...
     $('#modal4 iframe').attr("src", $("#modal4 iframe").attr("src"));
+});
+
+
+$('.carousel.single-img').carousel({
+    interval: 8000,
+    wrap: true,
+    keyboard: true
+});
+
+
+$('.video-icon').parent().click(function () {
+    if($(this).children(".video-icon").get(0).paused){
+        $(this).children(".video-icon").get(0).play();
+        $(this).children(".playpause-icon").fadeOut();
+    }else{
+        $(this).children(".video-icon").get(0).pause();
+        $(this).children(".playpause-icon").fadeIn();
+    }
 });

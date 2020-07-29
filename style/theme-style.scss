@@ -33,13 +33,12 @@ a {
 }
  .navbar-brand {
   color: rgba(0,0,0,.9);
-   max-width: 125px;
+   max-width: 140px;
    width: 100%;
    position: absolute;
     z-index: 99;
    top: 0;
   img {
-    max-width: 125px;
     width: 100%
   }
 }
@@ -92,7 +91,7 @@ a {
     top: 50%;
     text-align: center;
     padding: 0 15px;
-    max-width: 645px;
+    max-width: 700px;
     width: 100%;
     h2 {
       font-family: ArialRounded, serif;
@@ -225,6 +224,10 @@ a {
 .readmore-link.expand:after{
   content:"- less";
 }
+.corner-bottom-both-bevel {
+  border-color: Pink transparent transparent transparent;
+  border-width: 100px 100px 0 100px;
+}
 .trip-highlight-card {
   border-radius: 10px;
   .card-head {
@@ -237,6 +240,16 @@ a {
       width: 168px;
       height: 168px;
       border-radius: 5px;
+      .map-head {
+        font-size: 8px;
+        text-align: center;
+        padding: 2px 5px;
+        z-index: 999;
+        position: relative;
+        background: #7e2735;
+        color: #fff;
+        margin: 0 15px -15px 15px;
+      }
       iframe {
         border-radius: 5px;
       }
@@ -303,7 +316,22 @@ a {
 
   }
 }
-.video-grid{}
+.video-grid{
+  .playpause {
+    background-image:url(../images/video-icon.png);
+    background-repeat:no-repeat;
+    width:50%;
+    height:50%;
+    position:absolute;
+    left:0%;
+    right:0%;
+    top:0%;
+    bottom:0%;
+    margin:auto;
+    background-size:contain;
+    background-position: center;
+  }
+}
 .bg-yellow {
   background-image: url("../images/yellow-bg.png");
   background-repeat: no-repeat;
@@ -612,6 +640,34 @@ a {
     }
   }
 }
+
+
+.single-img {
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    h5 {
+      font-size: 22px;
+      letter-spacing: 0;
+      color: #fff;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 22px;
+      font-family: Arial, serif;
+      letter-spacing: 0;
+      color: #FFCC53;
+      margin-bottom: 0;
+    }
+  }
+}
+
 //Experience Index Css End
 @media (min-width: 1025px) {
   .navbar-expand-lg .navbar-nav .nav-link {

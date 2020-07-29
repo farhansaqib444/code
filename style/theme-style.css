@@ -198,10 +198,21 @@ a {
 .trip-highlight-card {
   border-radius: 10px; }
   .trip-highlight-card .card-head {
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    position: relative; }
+    .trip-highlight-card .card-head .map {
+      position: absolute;
+      bottom: 30px;
+      right: 0;
+      width: 168px;
+      height: 168px;
+      border-radius: 5px; }
+      .trip-highlight-card .card-head .map iframe {
+        border-radius: 5px; }
     .trip-highlight-card .card-head img {
       max-width: 425px;
-      width: 100%; }
+      width: 100%;
+      padding-right: 25px; }
   .trip-highlight-card .card-content h3 {
     font-size: 22px;
     font-weight: bold;
@@ -532,13 +543,26 @@ a {
     left: 50%; }
 
   .drag-content {
-    display: none;
-    position: relative;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+    right: 0;
+    left: 0;
+    margin-bottom: 0;
+    border-radius: 0;
     top: initial; }
     .drag-content .editor-card {
-      max-width: 100%; } }
+      box-shadow: 0px -2px 8px #00000029;
+      max-width: 100%;
+      border-radius: 0;
+      padding: 15px 20px; }
+      .drag-content .editor-card h5 {
+        display: inline;
+        font-size: 18px; }
+      .drag-content .editor-card .more-text, .drag-content .editor-card .btn-secondary {
+        display: none !important; }
+      .drag-content .editor-card .btn-primary {
+        float: right; } }
 @media (max-width: 767px) {
   .destination-section {
     margin: 50px 0; }
@@ -571,6 +595,14 @@ a {
 
   .trip-highlight-card .card-content p {
     font-size: 15px; }
+
+  .trip-highlight-card .card-head .map {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    width: 135px;
+    height: 135px;
+    border-radius: 5px; }
 
   .contact-us.media {
     flex-direction: column; }

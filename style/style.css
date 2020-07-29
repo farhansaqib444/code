@@ -291,6 +291,14 @@ button:focus {
 .images-grid a {
   margin-bottom: 15px; }
 
+.play-icon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%; }
+  .play-icon img {
+    width: 90px; }
+
 .video-gallery .video-left-widget a img {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px; }

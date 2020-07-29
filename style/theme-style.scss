@@ -534,6 +534,30 @@ a {
   margin-top: 100px;
   top: 100px;
 }
+
+.date-button {
+  position: relative;
+  i.fa {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+  }
+  input[type="button"] {
+    border: 1px solid #37424A;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: ArialRounded, serif;
+    max-width: 200px;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #fff;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+
+  }
+}
 .editor-card {
   max-width: 220px;
   max-height: 470px;
@@ -706,9 +730,16 @@ a {
     width: 100%;
     position: absolute;
     z-index: 99;
-    transform: translate(-50%, -50%);
-    top: 50%;
+    transform: translate(-50%, -0%);
+    top: 0;
     left: 50%;
+  }
+  .arrival-date {
+    .form-group {
+      display: inline-block;
+      max-width: 200px;
+      width: 100%;
+    }
   }
   .drag-content {
     position: fixed;
@@ -723,12 +754,12 @@ a {
       box-shadow: 0px -2px 8px #00000029;
       max-width: 100%;
       border-radius: 0;
-      padding: 15px 20px;
+      padding: 15px 20px 0 20px;
       h5 {
-        display: inline;
+        display: inline-block;
         font-size: 18px;
       }
-      .more-text, .btn-secondary {
+      p, .more-text, .btn-secondary {
         display: none !important;
       }
       .btn-primary {
@@ -738,7 +769,23 @@ a {
   }
 }
 @media (max-width: 767px) {
-
+  .arrival-date {
+    .form-group {
+      display: inline-block;
+      max-width: 120px;
+      width: 100%;
+    }
+  }
+  .date-button input[type="button"] {
+    font-size: 0.8rem;
+    padding: 8px 3px 8px 15px;
+    text-align: center;
+  }
+  .date-button i.fa {
+    position: absolute;
+    left: 7px;
+    top: 10px;
+  }
   .destination-section {
     margin: 50px 0;
   }
@@ -809,4 +856,38 @@ a {
     margin-bottom: 15px;
     font-size: 18px;
   }
+  .ex-index-card-content {
+    min-height: 160px;
+    .card-info {
+      h3 {
+        a {
+          font-size: 18px;
+          &:hover {
+            color: #FFFFFF;
+          }
+        }
+
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  .single-img {
+    .carousel-caption {
+      h5 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
 }
+@media (max-width: 424px) {
+  .breadcrumb .breadcrumb-item {
+    font-size: 11px;
+  }
+}
+

@@ -333,7 +333,7 @@ button:focus {
   position: absolute;
   z-index: 2;
   left: 15px;
-  top: 25px;
+  top: 22px;
   padding: 0 2px;
   pointer-events: none;
   background: #fff;
@@ -353,7 +353,7 @@ button:focus {
   color: #383838;
   outline: none;
   border: 1px solid #bbbbbb;
-  padding: 30px 15px 10px 15px;
+  padding: 20px 15px 10px 15px;
   border-radius: 8px;
   position: relative;
   width: 100%; }
@@ -377,21 +377,24 @@ button:focus {
   transform: translateY(-17px); }
 
 .btn-linkedIn {
-  color: #3b5998;
-  border-color: #3b5998; }
+  color: #fff;
+  border-color: #3b5998;
+  background-color: #3b5998; }
 
 .btn-google {
-  color: #e34929;
-  border-color: #e34929; }
+  color: #fff;
+  border-color: #e34929;
+  background-color: #e34929; }
+
+.btn-linkedIn, .btn-google {
+  border-radius: 0; }
 
 .btn-linkedIn, .btn-google, .login-btn {
   font-size: 16px;
   vertical-align: middle;
-  background: #fff;
-  max-width: 220px;
   width: 100%;
   margin-bottom: 15px;
-  padding: 15px 0; }
+  padding: 15px 10px; }
 
 .btn-linkedIn img, .btn-google img {
   width: 30px;

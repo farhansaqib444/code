@@ -578,6 +578,34 @@ a {
     color: #FFCC53;
     margin-bottom: 0; }
 
+.row.vertical-divider {
+  overflow: hidden; }
+
+.row.vertical-divider > div[class^="col-"] {
+  text-align: center;
+  padding-bottom: 100px;
+  margin-bottom: -100px;
+  border-left: 1px solid #dee2e6; }
+
+.row.vertical-divider div[class^="col-"]:first-child {
+  border-left: none; }
+
+.row.vertical-divider div[class^="col-"]:last-child {
+  border-right: none; }
+
+.login-modal {
+  max-width: 820px;
+  width: 100%; }
+  .login-modal .modal-body h3 {
+    font-size: 22px;
+    font-family: ArialRounded, serif;
+    margin-bottom: 15px; }
+    .login-modal .modal-body h3 + p {
+      font-size: 22px;
+      line-height: 26px; }
+  .login-modal .modal-body p {
+    font-size: 18px; }
+
 @media (min-width: 1025px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0;
@@ -633,7 +661,16 @@ a {
       .drag-content .editor-card p, .drag-content .editor-card .more-text, .drag-content .editor-card .btn-secondary {
         display: none !important; }
       .drag-content .editor-card .btn-primary {
-        float: right; } }
+        float: right; }
+
+  .row.vertical-divider > div[class^="col-"] {
+    padding-bottom: 100px;
+    margin-bottom: -100px;
+    border-left: none; }
+
+  .login-modal {
+    max-width: 520px;
+    width: 100%; } }
 @media (max-width: 767px) {
   .arrival-date .form-group {
     display: inline-block;
@@ -724,8 +761,13 @@ a {
     font-size: 18px; }
   .single-img .carousel-caption p {
     font-size: 18px; } }
-@media (max-width: 424px) {
+@media (max-width: 425px) {
   .breadcrumb .breadcrumb-item {
-    font-size: 11px; } }
+    font-size: 11px; }
+
+  .login-modal {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto; } }
 
 /*# sourceMappingURL=theme-style.css.map */

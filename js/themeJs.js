@@ -142,6 +142,7 @@ $('.carousel.single-img').carousel({
     keyboard: true
 });
 
+// video icon
 
 $('.video-icon').parent().click(function () {
     if($(this).children(".video-icon").get(0).paused){
@@ -150,5 +151,17 @@ $('.video-icon').parent().click(function () {
     }else{
         $(this).children(".video-icon").get(0).pause();
         $(this).children(".playpause-icon").fadeIn();
+    }
+});
+
+
+// show password icon
+
+$(".reveal").on('click',function() {
+    var $pwd = $(".pwd");
+    if ($pwd.attr('type') === 'password') {
+        $pwd.attr('type', 'text');
+    } else {
+        $pwd.attr('type', 'password');
     }
 });

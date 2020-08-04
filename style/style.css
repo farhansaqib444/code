@@ -25,6 +25,14 @@
 .navbar-light .navbar-toggler {
   background: none; }
 
+.user-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+  border: 1px solid #eee;
+  padding: 2px;
+  cursor: pointer; }
+
 /* hamburger classes and animation */
 .navbar-toggler {
   cursor: pointer;

@@ -6,6 +6,15 @@ body, p, h1, h2, h3, h4, label {
   margin: 0;
   padding: 0;
 }
+.main-banner-img {
+  max-width: 800px;
+  width: 100%;
+  height: 460px;
+}
+.box-size-img {
+  max-width: 230px;
+  height: 220px;
+}
 a {
   color: #FFCC53;
   &:hover {
@@ -14,13 +23,18 @@ a {
     text-decoration: none;
   }
 }
+.bg-dark {
+  color: #37424A !important;
+}
 .container-nav {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
 }
+.xyz-nax {
+  display: flex;
+}
 .navbar {
-  padding: 15px 15px;
   background: #fff;
   box-shadow: 0px 3px 6px #00000029;
   opacity: 1;
@@ -30,6 +44,13 @@ a {
   border: 0;
   position: relative;
   padding: 0;
+}
+.navbar-dark .navbar-toggler {
+  color: rgba(255,255,255,.5);
+  border: none;
+  span {
+    background-color: #fff;
+  }
 }
  .navbar-brand {
   color: rgba(0,0,0,.9);
@@ -42,9 +63,22 @@ a {
     width: 100%
   }
 }
+.collapse.show {
+  display: block;
+  margin-top: 20px;
+  transition: 1s ease-in-out;
+  .navbar-nav {
+    margin-top: 10px;
+    transition: 1s ease-in-out;
+  }
+}
  .navbar-nav {
    position: relative;
+   .btn {
+     margin-bottom: 5px;
+   }
  }
+ //nav-ligth css
 .navbar-light .navbar-nav .nav-link {
   color: #2C50B4;
   font-family: ArialRounded, serif;
@@ -62,14 +96,49 @@ a {
   color: #2C50B4;
 }
 
+//nav-dark css
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  font-family: ArialRounded, serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  &.login-btn {
+    color: #000;
+  }
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+  color: #fff;
+}
+.navbar-dark .header-price {
+  p {
+    color: #fff;
+  }
+}
+
+
+.header-price {
+  p {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+
 .mega-dropdown {
   padding: 15px 15px 35px;
   border: 0;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
   a {
     border-bottom: 2px solid #FFCC53;
     opacity: 0.8;
-    min-width: 200px;
-    width: 100%;
     background-image: url("../images/arrow-right.png");
     background-repeat: no-repeat;
     background-position: 100% 15px;
@@ -78,6 +147,45 @@ a {
     margin-bottom: 10px;
   }
 }
+.back-btn {
+  font-size: 18px;
+  font-weight: bold;
+  color: #37424A;
+  font-family: "ArialRounded", serif;
+  position: absolute;
+  left: -85px;
+  top: 23px;
+}
+.without-menu-nav {
+  padding: 15px 15px;
+  background: #fff;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+  z-index: 9;
+  .navbar-toggler {
+    border: 0;
+    position: relative;
+    padding: 0;
+  }
+  .navbar-brand {
+    color: rgba(0,0,0,.9);
+    max-width: 140px;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    img {
+      width: 100%
+    }
+  }
+  .left-nav {
+    margin-left: 140px;
+  }
+}
+.tab-navbar {
+
+}
+
 .banner {
   height: 650px;
   position: relative;
@@ -111,6 +219,11 @@ a {
     input {
 
     }
+  }
+}
+.form-control {
+  &.with-date-picker {
+    padding-left: 40px;
   }
 }
 .has-search {
@@ -147,6 +260,12 @@ a {
       font-family: ArialRounded, serif;
       letter-spacing: 0;
       color: #2C50B4;
+      i, a  {
+        margin-left: 20px;
+        color: #FFCC53;
+        font-size: 22px;
+        cursor: pointer;
+      }
     }
     .section-description {
       font-size: 22px;
@@ -228,6 +347,10 @@ a {
   border-color: Pink transparent transparent transparent;
   border-width: 100px 100px 0 100px;
 }
+.map-right {
+  .leaflet-map-pane {
+  }
+}
 .trip-highlight-card {
   border-radius: 10px;
   .card-head {
@@ -240,6 +363,12 @@ a {
       width: 168px;
       height: 168px;
       border-radius: 5px;
+      z-index: 1;
+      img {
+        width: 168px;
+        height: 168px;
+        border-radius: 8px;
+      }
       .map-head {
         font-size: 8px;
         text-align: center;
@@ -255,7 +384,9 @@ a {
       }
     }
     img {
-      max-width: 425px;
+      max-width: 370px;
+      height: 390px;
+      border-radius: 8px;
       width: 100%;
       padding-right: 25px;
     }
@@ -345,9 +476,7 @@ a {
   }
 }
 .bg-yellow {
-  background-image: url("../images/yellow-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: transparent linear-gradient(194deg, #FFCC53 0%, #37424A 100%) 0% 0% no-repeat padding-box;
 }
 .services-card {
   margin-bottom: 50px;
@@ -355,13 +484,16 @@ a {
   h3 {
     font-size: 22px;
     font-weight: bold;
+    color: #fff;
   }
   h2 {
     font-size: 28px;
     font-weight: bold;
+    color: #fff;
   }
   p {
     font-size: 22px;
+    color: #fff;
   }
 }
 .destination-section {
@@ -401,6 +533,61 @@ a {
     }
   }
 }
+
+.avatar-wrapper{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 50px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 1px 1px 15px -5px black;
+  transition: all .3s ease;
+  &:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  &:hover .profile-pic{
+    opacity: .5;
+  }
+  .profile-pic {
+    height: 100%;
+    width: 100%;
+    transition: all .3s ease;
+    &:after{
+      font-family: FontAwesome;
+      content: "\f007";
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      font-size: 190px;
+      background: #ecf0f1;
+      color: #34495e;
+      text-align: center;
+    }
+  }
+  .upload-button {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    .fa-arrow-circle-up{
+      position: absolute;
+      font-size: 234px;
+      top: -17px;
+      left: 0;
+      text-align: center;
+      opacity: 0;
+      transition: all .3s ease;
+      color: #FFCC53;
+    }
+    &:hover .fa-arrow-circle-up{
+      opacity: .9;
+    }
+  }
+}
+
 .signUp-section {
   background: url("../images/signup-bg.png") no-repeat;
   background-size: cover;
@@ -431,6 +618,8 @@ a {
     img {
       width: 100%;
       border-radius: 8px;
+      max-width: 425px;
+      height: 330px;
     }
   }
   .card-content {
@@ -448,6 +637,27 @@ a {
       font-family: Arial, serif;
       letter-spacing: 0;
       color: #040404;
+    }
+  }
+}
+
+.tab-light.nav-tabs {
+  border: 0;
+  margin-bottom: 45px;
+  .nav-item {
+
+    a.nav-link {
+      color: #777777;
+      font-size: 22px;
+      font-family: ArialRounded, serif;
+      margin-bottom: 0;
+      border: 0;
+      border-bottom: 1px solid #eee;
+      &.active {
+        border-bottom: 2px solid #001881;
+        color: #001881;
+        background-color: #fff;
+      }
     }
   }
 }
@@ -740,11 +950,71 @@ a {
   }
 }
 //Login Modal End
+
+.my-trip {
+  .media {
+    .trip-highlight-card {
+      max-width: 260px;
+      width: 100%;
+      margin-right: 25px;
+    }
+  }
+  .media-body {
+    h5 {
+      font-size: 20px;
+      font-family: ArialRounded, serif;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .media-btn {
+      position: absolute;
+    }
+  }
+}
+
+//Trip flow 1 css start
+.trip-flow-1 {
+  .left-content {
+    border: 1px solid #eee;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 8px;
+    padding-top: 30px;
+    position: relative;
+    background: #fff;
+    z-index: 9999999999;
+  }
+}
+//Trip flow 1 css end
+
+
+.about-us-page {
+  .section-content {
+    p {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  }
+}
 @media (min-width: 1025px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 0;
     margin: 0 45px;
+  }
+  .with-menu .left-nav {
+    margin-left: 140px;
+  }
+}
+@media (min-width: 769px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0 45px;
+  }
+  .with-menu .left-nav {
+    margin-left: 140px;
   }
 }
 @media (max-width: 1024px) {
@@ -754,17 +1024,33 @@ a {
 }
 
 @media (min-width: 992px) {
-
-  .navbar-expand-lg .left-nav {
+  .mega-dropdown {
+    min-width: 800px;
+    width: 100%;
+    &.show {
+      display: flex;
+    }
+  }
+  .with-menu .left-nav {
     margin-left: 140px;
   }
   .nav-item .btn-primary {
-    margin-right: 56px;
+    margin-right: 40px;
   }
 }
 @media (max-width: 991px) {
+  .mega-dropdown {
+    max-width: 800px;
+    width: 100%;
+    &.show {
+      display: flex;
+    }
+  }
   .navbar {
-    padding: 13px 15px;
+    padding: 16px 15px;
+    &.navbar-light {
+      padding: 13px 15px;
+    }
   }
   .navbar-expand-lg .navbar-nav .nav-link {
     margin: 0 20px;
@@ -772,6 +1058,13 @@ a {
 }
 
 @media (max-width: 768px) {
+  .btn {
+    font-family: ArialRounded, serif;
+    letter-spacing: 0;
+    padding: 3px 8px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
   .navbar-brand {
     max-width: 71px;
     width: 100%;
@@ -780,6 +1073,71 @@ a {
     transform: translate(-50%, -0%);
     top: 0;
     left: 50%;
+  }
+  .back-btn {
+    font-size: 14px;
+    font-weight: bold;
+    color: #37424A;
+    font-family: "ArialRounded", serif;
+    position: absolute;
+    left: -60px;
+    top: 23px;
+  }
+  .without-menu-nav .left-nav {
+    margin-left: 50px;
+  }
+  .without-menu-nav.tab-navbar.space-left {
+    .left-nav {
+      margin-left: 120px;
+    }
+  }
+  .with-menu .left-nav {
+    margin-left: 0;
+  }
+  .without-menu-nav {
+    padding: 15px 15px;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+    z-index: 9;
+    .navbar-nav {
+      position: relative;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    .nav-right {
+
+    }
+    .navbar-toggler {
+      border: 0;
+      position: relative;
+      padding: 0;
+    }
+    .navbar-brand {
+      color: rgba(0,0,0,.9);
+      max-width: 77px;
+      width: 100%;
+      position: absolute;
+      z-index: 99;
+      transform: translate(0);
+      left: 0;
+      top: 0;
+      img {
+        width: 100%
+      }
+
+    }
+  }
+
+  .tab-navbar .navbar-brand {
+    color: rgba(0, 0, 0, 0.9);
+    max-width: 77px;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    transform: translate(0);
+    left: 70px;
+    top: 0;
   }
   .arrival-date {
     .form-group {
@@ -826,6 +1184,46 @@ a {
   }
 }
 @media (max-width: 767px) {
+  .main-banner-img {
+    max-width: 800px;
+    width: 100%;
+    height: 230px;
+  }
+  .my-trip {
+    .media {
+      flex-direction: column;
+      .trip-highlight-card {
+        margin-right: 15px;
+        .card-head {
+          img {
+            max-width: 160px;
+            height: 250px;
+          }
+          .map {
+            right: 90px;
+            width: 135px;
+            height: 135px;
+
+            img {
+              width: 135px;
+              height: 135px;
+            }
+          }
+        }
+      }
+    }
+    .media-body {
+      h5 {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      .media-btn {
+        position: relative;
+        margin-top: 15px;
+        bottom: 0;
+      }
+    }
+  }
   .arrival-date {
     .form-group {
       display: inline-block;
@@ -879,6 +1277,12 @@ a {
   .trip-highlight-card .card-content p {
     font-size: 15px;
   }
+  .trip-highlight-card .card-head img {
+    max-width: 425px;
+    width: 100%;
+    padding-right: 25px;
+    height: 250px;
+  }
   .trip-highlight-card .card-head .map {
     position: absolute;
     bottom: 20px;
@@ -886,6 +1290,11 @@ a {
     width: 135px;
     height: 135px;
     border-radius: 5px;
+    img {
+      width: 130px;
+      height: 130px;
+      border-radius: 8px;
+    }
   }
   .contact-us.media {
     flex-direction: column;
@@ -943,6 +1352,26 @@ a {
 
 }
 @media (max-width: 425px) {
+  .btn {
+    font-family: ArialRounded, serif;
+    letter-spacing: 0;
+    padding: 1px 5px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  .without-menu-nav {
+    padding: 18px 15px;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    font-family: ArialRounded, serif;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    font-family: ArialRounded, serif;
+    font-size: 12px;
+    font-weight: 500;
+  }
   .breadcrumb .breadcrumb-item {
     font-size: 11px;
   }
@@ -950,6 +1379,13 @@ a {
     max-width: 360px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media (max-width: 424px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    margin: 0 10px;
+    font-size: 12px;
   }
 }
 

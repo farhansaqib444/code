@@ -1,3 +1,22 @@
+$(function() {
+
+    $('input[name="datefilter"]').daterangepicker({
+        autoUpdateInput: false,
+        locale: {
+            cancelLabel: 'Clear'
+        }
+    });
+
+    $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+    });
+
+    $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+    });
+
+});
+
 $('.carousel').carousel({
 
 }) ;
@@ -165,3 +184,28 @@ $(".reveal").on('click',function() {
         $pwd.attr('type', 'password');
     }
 });
+
+
+$(document).ready(function() {
+
+    var readURL = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.profile-pic').attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    };
+
+    $(".file-upload").on('change', function(){
+        readURL(this);
+    });
+
+    $(".upload-button").on('click', function() {
+        $(".file-upload").click();
+    });
+});
+// https://codepen.io/gdev/pen/bKdjpa

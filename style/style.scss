@@ -8,6 +8,27 @@
   .text-blue {
     color: #2C50B4 !important;
   }
+.max-2-line {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+ }
+.max-3-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.max-4-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
 .lead-text {
   color: #FFCC53 !important;
 }
@@ -295,7 +316,7 @@ button:focus {
   border-color: #FFCC53;
 }
 .btn-light:hover {
-  color: #FFCC53;
+  color: #fff;
   background-color: #fff;
   border-color: #FFCC53;
 }
@@ -784,8 +805,8 @@ $secondary-color: #37424A;
   }
 }
 
-                //with our dots pagination css
-                //with our dots pagination css
+                //with out dots pagination css
+                //with out dots pagination css
 
 .pagination_section {
   text-align: center;
@@ -830,6 +851,46 @@ a:nth-child(5) {
   margin-top: -5px;
   border-radius: 10px !important;
 }
+
+//with our dots pagination css end
+//with our dots pagination css end
+
+//Collapes Panel Start
+span:before {
+
+}
+.panel-heading .accordion-toggle:after {
+  font-family: 'Material Icons';
+  content: '\e5ce';
+  float: right;
+}
+.panel-heading .accordion-toggle.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\e5cf";
+}
+
+
+.panel-group {
+
+  .panel {
+    .panel-heading {
+      background: #37424A 0% 0% no-repeat padding-box;
+      border-radius: 8px;
+      padding: 10px 10px;
+      margin-bottom: 5px;
+      .panel-title {
+        font-size: 24px;
+        font-family: ArialRounded, serif;
+        letter-spacing: 0px;
+        color: #FFCC53;
+      }
+    }
+    .panel-body {
+      margin-bottom: 10px;
+    }
+  }
+}
+//Collapes Panel end
 @media (max-width: 767px) {
   .bottom-nav {
     ul{
@@ -872,5 +933,4 @@ a:nth-child(5) {
   }
 }
 
-          //with our dots pagination css end
-          //with our dots pagination css end
+

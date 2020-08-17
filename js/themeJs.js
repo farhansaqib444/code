@@ -1,25 +1,52 @@
-$(function() {
-
-    $('input[name="datefilter"]').daterangepicker({
-        autoUpdateInput: false,
-        locale: {
-            cancelLabel: 'Clear'
-        }
-    });
-
-    $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-    });
-
-    $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
-        $(this).val('');
-    });
-
-});
-
 $('.carousel').carousel({
 
 }) ;
+
+
+// value plus minus button start
+function increaseValue() {
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('number').value = value;
+}
+
+function decreaseValue() {
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value < 1 ? value = 1 : '';
+    value--;
+    document.getElementById('number').value = value;
+}
+
+// value plus minus button end
+
+$(document).ready(function(){
+    // Add scrollspy to <body>
+    $('body').scrollspy({target: ""});
+
+    // Add smooth scrolling on all links inside the navbar
+    $("#page-scroll-target a").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 1000, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        }  // End if
+    });
+});
 
 $(function() {
     //toggle class open on button
@@ -37,6 +64,7 @@ $(document).ready(function(){
         responsive:{
             0:{
                 items:2,
+                nav: true,
             },
             600:{
                 items:3,
@@ -56,11 +84,12 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $(".owl-carousel.trips-owl").owlCarousel({
-        loop:true,
+        
         margin:25,
         responsive:{
             0:{
                 items:2,
+                nav: true,
             },
             600:{
                 items:3,
@@ -80,11 +109,12 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $(".owl-carousel.padding-spacing").owlCarousel({
-        loop:true,
+        
         margin:25,
         responsive:{
             0:{
                 stagePadding: 50,
+                nav: true,
             },
             600:{
                 nav: true,
@@ -106,12 +136,13 @@ $(document).ready(function(){
 $(document).ready(function(){
     $(".country-owl.owl-carousel").owlCarousel({
         nav: true,
-        loop:true,
+        
         dots: false,
         margin:25,
         responsive:{
             0:{
                 items:1,
+                nav: true,
             },
         }
     });
@@ -136,22 +167,6 @@ $(".readmore-link").click( function(e) {
 $(document).on("click", '[data-toggle="lightbox"]', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox();
-});
-
-// video grid
-$('#modal1').on('hidden.bs.modal', function (e) {
-    // do something...
-    $('#modal1 iframe').attr("src", $("#modal1 iframe").attr("src"));
-});
-
-$('#modal6').on('hidden.bs.modal', function (e) {
-    // do something...
-    $('#modal6 iframe').attr("src", $("#modal6 iframe").attr("src"));
-});
-
-$('#modal4').on('hidden.bs.modal', function (e) {
-    // do something...
-    $('#modal4 iframe').attr("src", $("#modal4 iframe").attr("src"));
 });
 
 
@@ -404,6 +419,43 @@ $(function() {
     });
 
 });
+
+
+// Filter price start
+var lowerSlider = document.querySelector('#lower');
+var  upperSlider = document.querySelector('#upper');
+
+document.querySelector('#two').value=upperSlider.value;
+document.querySelector('#one').value=lowerSlider.value;
+
+var  lowerVal = parseInt(lowerSlider.value);
+var upperVal = parseInt(upperSlider.value);
+
+upperSlider.oninput = function () {
+    lowerVal = parseInt(lowerSlider.value);
+    upperVal = parseInt(upperSlider.value);
+
+    if (upperVal < lowerVal + 4) {
+        lowerSlider.value = upperVal - 4;
+        if (lowerVal == lowerSlider.min) {
+            upperSlider.value = 4;
+        }
+    }
+    document.querySelector('#two').value=this.value
+};
+
+lowerSlider.oninput = function () {
+    lowerVal = parseInt(lowerSlider.value);
+    upperVal = parseInt(upperSlider.value);
+    if (lowerVal > upperVal - 4) {
+        upperSlider.value = lowerVal + 4;
+        if (upperVal == upperSlider.max) {
+            lowerSlider.value = parseInt(upperSlider.max) - 4;
+        }
+    }
+    document.querySelector('#one').value=this.value
+};
+// Filter price end
 
 
 

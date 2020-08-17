@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://use.fontawesome.com/b7e5bcc19f.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
@@ -86,7 +86,7 @@
     </div>
 </nav>
 
-<div class="container">
+<div class="container mt-5 pt-5">
     <div class="row">
         <div class="col text-center ">
             <!-- Button trigger modal -->
@@ -95,22 +95,105 @@
             </button>
 
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forgotPassword">
-                Login
+                Recover
+            </button>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trabajoModal">
+                Mesa de trabajo – 8
             </button>
         </div>
         </div>
     </div>
 
 <!-- Modal -->
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog  login-modal" role="document">
+<div class="modal fade" id="trabajoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog special-modal" role="document">
         <div class="modal-content">
             <div class="modal-header border-0 pb-0">
+                <h3>
+                    Edit your experiences in Cotopaxi National Park
+                </h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body pt-0 pb-5">
+
+                <div class="box">
+                    <div class="media mini-media">
+                        <button type="button" class="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="images/ex-index-trip.png" alt="">
+                        <div class="media-body">
+                            <h5>Title item</h5>
+                            <p>8 hours</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="media mini-media">
+                        <button type="button" class="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="images/ex-index-trip.png" alt="">
+                        <div class="media-body">
+                            <h5>Title item</h5>
+                            <p>8 hours</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="media mini-media">
+                        <button type="button" class="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="images/ex-index-trip.png" alt="">
+                        <div class="media-body">
+                            <h5>Title item</h5>
+                            <p>8 hours</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="media mini-media">
+                        <button type="button" class="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="images/ex-index-trip.png" alt="">
+                        <div class="media-body">
+                            <h5>Title item</h5>
+                            <p>8 hours</p>
+                        </div>
+                    </div>
+                    <div class="delete-notification">
+                        <p class="text-danger">
+                            You are about to delete this experience from your itinerary. Are you sure?
+                        </p>
+
+                        <button class="btn btn-light">Yes</button>
+                        <button class="btn btn-secondary">No</button>
+                    </div>
+                </div>
+
+                <div class="pt-3">
+                    <button class="btn btn-primary"> Add more </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  login-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body pt-0 pb-5">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 mb-5">
@@ -162,14 +245,14 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </div>
-</div>
 
 
-<div class="modal fade" id="forgotPassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+    <div class="modal fade" id="forgotPassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
             <div class="modal-header border-0 pb-0">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -198,12 +281,13 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
 
 
 <!-- inspired by http://littlebigdetails.com/post/82478225432/circleci-once-activated-the-input-placeholders -->
 
 
+</div>
 </body>
 
 

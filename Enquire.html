@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> My Trip </title>
+    <title> Enquire </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,15 +19,11 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/theme-style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
-    <script src="leaflet-1/leaflet.polylineDecorator.js"></script>
-
-    <script src="leaflet-1/example.js"></script>
     <style>
 
     </style>
 </head>
-<body onload="init();">
+<body>
 
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark with-menu">
     <div class="container-nav">
@@ -102,139 +98,147 @@
     <div class="page-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
-                    <div class="section-head">
-                        <h2 class="section-title">
-                            Top Experiences in South America
-                        </h2>
-                    </div>
+                <div class="col-lg-8">
                     <div class="section-content">
                         <ul class="nav nav-tabs tabbable tab-light" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="city1-tab" data-toggle="tab" href="#city1" role="tab" aria-controls="city1" aria-selected="true">My Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " id="city2-tab" data-toggle="tab" href="#city2" role="tab" aria-controls="city2" aria-selected="true">My Trips</a>
+                                <a class="nav-link active " id="city2-tab" data-toggle="tab" href="#city2" role="tab" aria-controls="city2" aria-selected="true">My Trips</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="city1" role="tabpanel" aria-labelledby="city1-tab">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="media border-bottom pb-4 mb-5">
-                                            <div class="trip-highlight-card">
-                                                <div class="card-head">
-                                                    <img src="images/trip-card-img.png" alt="">
-                                                    <div class="map" id="map">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <h5 class="mt-0">
-                                                    <p>Media heading</p>
-                                                    <button class="btn btn-light">Delete</button>
-                                                </h5>
-                                                <p>
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla
-                                                    vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum
-                                                    in vulputate at, tempus viverra turpis.
-                                                    Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                                                </p>
-                                                <div class="media-btn">
-                                                    <button class="btn btn-primary mr-3">View Trip</button>
-                                                    <button class="btn btn-secondary">Enquire</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="media border-bottom pb-4 mb-5">
-                                            <div class="trip-highlight-card">
-                                                <div class="card-head">
-                                                    <img src="images/trip-card-img.png" alt="">
-                                                    <div class="map">
-                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13597.083266021025!2d74.3235535!3d31.571620600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1595998671122!5m2!1sen!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <h5 class="mt-0">
-                                                    <p>Media heading</p>
-                                                    <button class="btn btn-light">Delete</button>
-                                                </h5>
-                                                <p>
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla
-                                                    vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum
-                                                    in vulputate at, tempus viverra turpis.
-                                                    Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                                                </p>
-                                                <div class="media-btn">
-                                                    <button class="btn btn-primary mr-3">View Trip</button>
-                                                    <button class="btn btn-secondary">Enquire</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="city2" role="tabpanel" aria-labelledby="city2-tab">
+                            <div class="tab-pane fade show active" id="city2" role="tabpanel" aria-labelledby="city2-tab">
                                 <form action="">
                                     <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-lg-6 ">
-                                                <div class="avatar-wrapper ">
-                                                    <img class="profile-pic" src="" />
-                                                    <div class="upload-button">
-                                                        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
-                                                    </div>
-                                                    <input class="file-upload" type="file" accept="image/*"/>
+                                        <div class="row">
+                                           <div class="col">
+                                               <div class="icon-heading">
+                                                   <h3 class="mb-0">Want to personalize it?</h3>
+                                                   <p class="mb-2">We can customize the entire trip basd on your budget.</p>
+                                               </div>
+                                           </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" aria-describedby="" placeholder="Less than $1500">
                                                 </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="$1500 - $3000">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" aria-describedby="" placeholder="$3000 - $5000">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="Phone" placeholder="More than $5000">
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <label for="firstName">First Name</label>
-                                                    <input type="text" class="form-control" id="firstName" aria-describedby="firstName" placeholder="Depp">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <label for="secondName">Second Name</label>
-                                                    <input type="text" class="form-control" id="secondName" placeholder="Jhonny">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Email </label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <label for="Phone">Phone Number</label>
-                                                    <input type="password" class="form-control" id="Phone" placeholder="Not Provided">
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="row">
                                             <div class="col">
-                                                <div class="form-group">
-                                                    <a href="*Change Password"></a>
+                                                <div class="icon-heading">
+                                                    <h3 class="mb-0">* Number of passengers</h3>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col">
-                                                <button class="btn-primary btn mr-2" href="#">Save Changes</button>
-                                                <button class="btn-secondary btn" href="#">Log Out</button>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <select name="" class="form-control">
+                                                        <option value="">0</option>
+                                                        <option value="">1 Adult</option>
+                                                        <option value="">3 Adults</option>
+                                                        <option value="">4 Adults</option>
+                                                        <option value="">5 Adults</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <select name="" class="form-control">
+                                                        <option value="">0</option>
+                                                        <option value="">1 Kids</option>
+                                                        <option value="">3 Kids</option>
+                                                        <option value="">4 Kids</option>
+                                                        <option value="">5 Kids</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="icon-heading">
+                                                    <h3 class="mb-0">More details about your trip</h3>
+                                                    <p class="mb-2">Are you in a honeymoon? Do you have special interests?</p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea name="" class="form-control" rows="10"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="icon-heading">
+                                                    <h3 class="mb-0">*Personal information</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" aria-describedby="" placeholder="First Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="Phone" placeholder="Last Name">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="icon-heading">
+                                                    <h3 class="mb-0">Do you want us to call you?</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" aria-describedby="" placeholder="Phone Number">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <button class="btn-primary btn mr-2" href="#">Inquire Now</button>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </form>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="drag-content mt-0 p-3 bg-white">
+                        <h5 class="">Place Name</h5>
+                        <div class="header-price ">
+                            <p class="lead-text"> <span>50$</span> per person </p>
+                            <p class="head-date "> 20 May 21 - 22 May 2021 </p>
                         </div>
                     </div>
                 </div>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://use.fontawesome.com/b7e5bcc19f.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
@@ -16,6 +16,8 @@
           rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/theme-style.css">
@@ -61,7 +63,7 @@
                     </div>
                 </li>
                 <li class="nav-item d-none d-md-block ">
-                    <button class="btn-primary btn mr-2" href="#">New Trip</button>
+                    <button class="btn-primary btn mr-2" href="#">Save Trip</button>
                 </li>
                 <li class="nav-item d-none d-md-block ">
                     <button class="btn-primary btn" href="#">Enquire</button>
@@ -89,7 +91,8 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group date-button">
-                                            <input type="text" class="form-control with-date-picker" name="daterange" value="01/01/2018 - 01/15/2018" />
+<!--                                            <input type="text" class="form-control with-date-picker" name="daterange" value="01/01/2018 - 01/15/2018" />-->
+                                            <input class="form-control pl-5" type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
                                             <i class="fa fa-calendar"></i>
                                         </div>
                                     </div>
@@ -118,7 +121,17 @@
                                            </div>
                                            <div id="collapseOne" class="panel-collapse collapse in show">
                                                <div class="panel-body">
-
+                                                    <div class="section-content">
+                                                        <form action="">
+                                                            <div class="item-counter">
+                                                                <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                                                                <div class="">
+                                                                    <input type="number" id="number" value="0" /> <span>Nights</span>
+                                                                </div>
+                                                                <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                    <div class="section-content">
                                                        <div class="icon-heading tinny-view">
                                                            <h3>
@@ -150,7 +163,7 @@
                                                    <div class="section-content">
                                                        <div class="icon-heading tinny-view">
                                                            <h3>
-                                                               <img src="images/whereToGo.png" alt="">
+                                                               <img src="images/airport.png" alt="">
                                                                <span></span> Airport Transfer
                                                            </h3>
                                                            <button class="right-bottom btn btn-light py-1">Edit</button>
@@ -174,6 +187,77 @@
                                                    </div>
 
                                                    <div class="section-content">
+                                                       <div class="icon-heading tinny-view">
+                                                           <h3>
+                                                               <img src="images/property.png" alt="">
+                                                               <span>Your property in </span> Cotopaxi National Park
+                                                           </h3>
+                                                           <button class="right-bottom btn btn-light py-1">Edit</button>
+                                                       </div>
+                                                       <div class="icon-head-content readmore">
+<!--                                                           <p>content here</p>-->
+                                                           <span class="readmore-link"></span>
+                                                       </div>
+
+                                                        <div class="info-with-images">
+                                                            <h3>Hotel Name</h3>
+                                                            <p>Price: <span>30$</span> per night, per person</p>
+                                                            <div class="row mt-3">
+                                                                <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-6 col-6">
+                                                                    <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
+                                                                </a>
+                                                                <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-6 col-6">
+                                                                    <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+                                                                </a>
+                                                                <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-6 col-6">
+                                                                    <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+                                                                </a>
+                                                                <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-6 col-6">
+                                                                    <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                   </div>
+
+                                                   <div class="section-content">
+                                                       <div class="icon-heading tinny-view">
+                                                           <h3>
+                                                               <img src="images/experience-lead.png" alt="">
+                                                               <span>Experiences in </span> Cotopaxi National Park
+                                                           </h3>
+                                                           <button class="right-bottom btn btn-light py-1">Edit</button>
+                                                       </div>
+                                                       <div class="icon-head-content readmore">
+                                                           <!--                                                           <p>content here</p>-->
+                                                           <span class="readmore-link"></span>
+                                                       </div>
+
+                                                       <div class="info-with-images">
+                                                           <h3>Hotel Name</h3>
+                                                           <p>Price: <span>30$</span> per night, per person</p>
+                                                           <div class="row mt-3">
+                                                               <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-6 col-6">
+                                                                   <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
+                                                               </a>
+                                                               <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-6 col-6">
+                                                                   <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+                                                               </a>
+                                                               <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-6 col-6">
+                                                                   <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+                                                               </a>
+                                                               <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-6 col-6">
+                                                                   <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+                                                               </a>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+
+                                                   <div class="section-content">
+                                                       <div class="icon-heading tinny-view">
+                                                           <h3>
+                                                               <span>Experiences in </span> Cotopaxi National Park
+                                                           </h3>
+                                                       </div>
                                                        <div class="padding-spacing with-three owl-carousel">
                                                            <div>
                                                                <div id="carouselExampleIndicators2" class="carousel slide single-img carousel-fade" data-ride="carousel">
@@ -321,6 +405,9 @@
                                                            </div>
                                                        </div>
                                                    </div>
+                                                   <div class="section-footer pb-3">
+                                                       <button class="btn btn-primary">View all</button>
+                                                   </div>
 
                                                </div>
                                            </div>
@@ -378,7 +465,7 @@
             <p class="head-date"> 20 May 21 - 22 May 2021 </p>
         </div>
         <div>
-            <button class="btn-primary btn mr-2" href="#">New Trip</button>
+            <button class="btn-primary btn mr-2" href="#">Save Trip</button>
             <button class="btn-primary btn" href="#">Enquire</button>
         </div>
     </div>
@@ -392,9 +479,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
+<!--                                            daterange script-->
+<script>
+    $(function() {
+        $('input[name="daterange"]').daterangepicker({
+            opens: 'left'
+        }, function(start, end, label) {
+            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        });
+    });
+</script>
+<!--                                            daterange script-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
